@@ -1,0 +1,9 @@
+[submodule "tools/dt"]
+	path = tools/dt
+	url = https://github.com/Siguza/dt.git
+[submodule "tools/ldid"]
+	path = tools/ldid
+	url = https://github.com/sbingner/ldid.git
+[submodule "tools/img4lib"]
+	path = tools/img4lib
+	url = https://github.com/xerub/img4lib.git
