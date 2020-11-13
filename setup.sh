@@ -18,8 +18,7 @@ then
   exit -3
 fi
 
-git submodule init
-git submodule update
+git submodule update --init --recursive --remote
 
 brew bundle --file=- <<-EOS
 brew "automake"
@@ -37,3 +36,10 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 make -C tools/dt
 make -C tools/ldid
 make -C tools/img4lib
+make -C tools/termz
+
+
+cp tools/dt/dt bin/
+cp tools/ldid/ldid bin/
+cp tools/img4lib/img4 bin/
+cp tools/termz/termz bin/

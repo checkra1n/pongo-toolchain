@@ -8,3 +8,6 @@
 [submodule "tools/img4lib"]
 	path = tools/img4lib
 	url = https://github.com/xerub/img4lib.git
+[submodule "tools/termz"]
+	path = tools/termz
+	url = https://github.com/kpwn/termz.git
