@@ -3,7 +3,8 @@
 	url = https://github.com/Siguza/dt.git
 [submodule "tools/ldid"]
 	path = tools/ldid
-	url = https://github.com/sbingner/ldid.git
+	url = https://github.com/rickmark/ldid.git
+	branch = plist2
 [submodule "tools/img4lib"]
 	path = tools/img4lib
 	url = https://github.com/xerub/img4lib.git
