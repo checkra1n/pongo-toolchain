@@ -18,6 +18,10 @@ then
   exit -3
 fi
 
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
 git submodule update --init --recursive --remote
 
 brew bundle --file=- <<-EOS
@@ -43,3 +47,8 @@ cp tools/dt/dt bin/
 cp tools/ldid/ldid bin/
 cp tools/img4lib/img4 bin/
 cp tools/termz/termz bin/
+
+OUTPUT_DIR="$(dirname "$0")/bin"
+
+echo "Built your tools in: $OUTPUT_DIR"
+echo "Now add '$(realpath $OUTPUT_DIR)' to your system PATH"
